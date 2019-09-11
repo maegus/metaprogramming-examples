@@ -1,4 +1,4 @@
-class CarModel
+class Car
   def engine_info=(info)
     @engine_info = info
   end
@@ -61,21 +61,5 @@ class CarModel
 
   def alarm_price
     @alarm_price
-  end
-
-  def stereo_info=(info)
-    @stereo_info = info
-  end
-
-  def stereo_info
-    @stereo_info
-  end
-
-  def stereo_price=(price)
-    @stereo_price = price
-  end
-
-  def stereo_price
-    @stereo_price
   end
 end

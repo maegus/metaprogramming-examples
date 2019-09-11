@@ -10,14 +10,17 @@ c2:
 c2e:
 	gcc -E macro_problem.c
 
+c3:
+	gcc macro_with_paren.c && ./a.out
+
+c3e:
+	gcc -E macro_with_paren.c
+
 h1:
 	gcc hygiene_macro.c && ./a.out
 
 h1e:
 	gcc -E hygiene_macro.c
-
-c3:
-	gcc macro_with_paren.c && ./a.out
 
 e1:
 	iex macro.exs
@@ -28,3 +31,7 @@ r1:
 r2:
 	rustc macro_with_hash.rs && ./macro_with_hash
 
+clean:
+	rm macro
+	rm macro_with_hash
+	rm a.out

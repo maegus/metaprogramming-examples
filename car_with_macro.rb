@@ -1,5 +1,5 @@
-class CarModel
-  FEATURES = ["engine", "wheel", "airbag", "alarm", "stereo"]
+class Car
+  FEATURES = ["engine", "wheel", "airbag", "alarm"]
 
   FEATURES.each do |feature|
     define_method("#{feature}_info=") do |info|
@@ -10,7 +10,7 @@ class CarModel
       instance_variable_get("@#{feature}_info")
     end
 
-    define_method "feature_price=" do |price|
+    define_method "#{feature}_price=" do |price|
       instance_variable_set("@#{feature}_price", price)
     end
 
